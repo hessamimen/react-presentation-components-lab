@@ -7,7 +7,8 @@ import SimplerComponent from './components/SimplerComponent';
 ReactDOM.render(
   <div>
     <SimpleComponent />
-    <SimplerComponent handleClick={undefined} />
+    <SimplerComponent handleClick={(e) => {
+      e.target.innerHTML === 'I am just happy' ? e.target.innerHTML =  "I am just sad" : e.target.innerHTML = 'I am just happy'}} />
   </div>,
   document.getElementById('root')
 );
